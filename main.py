@@ -30,7 +30,7 @@ player_items = [{"item": potion, "quantity": random.randrange(1, 5)},
                 {"item": superpotion, "quantity": random.randrange(0, 3)},
                 {"item": elixer, "quantity": random.randrange(0, 3)},
                 {"item": hielixer, "quantity": random.randrange(0, 2)},
-                {"item": grenade, "quantity": random.randrange(1, 2)}]
+                {"item": grenade, "quantity": random.randrange(1, 3)}]
 
 # The beginning of execution of the game
 running = True
@@ -289,8 +289,8 @@ while running:  # Program attack loop begins
                         bcolors.FAIL + "You needed to choose a number. Chance missed !!" + bcolors.ENDC)
                     continue
 
-                enemies[enemy].take_damage(item.prop - 200)
-                print(bcolors.FAIL + "\n" + item.name + " deals ", str(item.prop - 200),
+                enemies[enemy].take_damage(item.prop)
+                print(bcolors.FAIL + "\n" + item.name + " deals ", str(item.prop),
                       " points of damage to " + enemies[enemy].name + bcolors.ENDC)
                 
 
